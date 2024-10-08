@@ -2,8 +2,8 @@
 
 可以直接使用.sh腳本安裝，但建議還是按照PDF檔正常安裝。  
 ppt及[YT影片](https://youtu.be/9Z9DbimJpRg)是使用教學。  
-![nodered](./node-red1.png)
 ![nodered](./node-red2.png)
+![nodered](./node-red1.png)
 
 必備條件:  
 1.一塊電路板、mpu6050  
