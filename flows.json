@@ -1,0 +1,1264 @@
+[
+    {
+        "id": "c92f87feda0c05d7",
+        "type": "tab",
+        "label": "專案",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5ba691cfaa28489a",
+        "type": "ui_spacer",
+        "z": "c92f87feda0c05d7",
+        "name": "spacer",
+        "group": "8faa4f55002c8c24",
+        "order": 3,
+        "width": "",
+        "height": ""
+    },
+    {
+        "id": "b9e05edf4e544cf5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7b4589c8e9a4767b",
+        "type": "ui_group",
+        "name": "MPU6050",
+        "tab": "b0c27d05.c92f7",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ca82fb74c673b6b3",
+        "type": "ui_group",
+        "name": "使用者資訊",
+        "tab": "b0c27d05.c92f7",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b2f9ea53885e0554",
+        "type": "ui_group",
+        "name": "如何避免骨質酥鬆",
+        "tab": "b0c27d05.c92f7",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b0c27d05.c92f7",
+        "type": "ui_tab",
+        "name": "Control Panel",
+        "icon": "fa-cogs",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b7b041cdc85744eb",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "5d507dbbb2ec7268",
+        "type": "http in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "url": "falldetection",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "cf1fa475c6d1a995"
+            ]
+        ]
+    },
+    {
+        "id": "cf1fa475c6d1a995",
+        "type": "template",
+        "z": "c92f87feda0c05d7",
+        "name": "webpage0",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n    <header>\n        <h1>長者居家安全守護網</h1>\n        <h2>Made by Zhengqiying</h2>\n    </header>\n    <body>\n        <style>\n        body {\n            font-family: 'Arial', sans-serif;\n            margin: 0;\n            padding: 0;\n            text-align: center;\n            background-color: #ADD8E6; /* 這行代碼將背景設為藍色 */\n        }\n\n        header {\n            background: #f0f0f0;\n            padding: 20px;\n        }\n\n        h1 {\n            font-size: 2em;\n            color: #333;\n        }\n\n        h2 {\n            font-size: 1.5em;\n            color: #555;\n            margin-bottom: 40px;\n        }\n\n        html, body {\n            height: 100%;\n            margin: 0;\n            padding: 0;\n            display: flex;\n            flex-direction: column;\n        }\n\n        main {\n            display: flex; /* 应用Flex布局 */\n            flex-direction: row; /* 将主轴方向设置为水平 */\n            justify-content: center; /* 水平居中子元素 */\n            flex-wrap: wrap; /* 允许子元素在必要时换行 */\n            gap: 20px; /* 设置子元素之间的间距 */\n            flex: 1;\n            }\n\n        article {\n            flex: 1; /* 让每个article元素都有相同的空间分配 */\n            min-width: 300px; /* 设置最小宽度，防止内容过于拥挤 */\n            max-width: 100%; /* 确保article不超过屏幕宽度 */\n        }\n        \n        article img {\n            max-width: 100%; /* 使图片宽度不超过其父元素的宽度 */\n            height: auto; /* 保持图片的原始宽高比 */\n        }\n\n        #screenshots {\n            display: flex;\n            justify-content: center;\n            gap: 20px;\n        }\n\n        #benefit {\n            margin: 40px 0;\n        }\n\n        #benefit img, #screenshots img {\n            width: 5px; /* 调整图片的宽度 */\n            height: auto;\n            margin-top: 20px;\n        }\n\n        #integration {\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n        }\n\n        #platform {\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n        }\n\n        #platform-description {\n            margin: 20px 0;\n        }\n\n        p {\n            font-size: 24px; /* 或者你想要的任何大小 */\n            font-weight: bold; /* 将文字设置为粗体 */\n        }\n        \n        footer {\n            background-color: #000; /* 设置背景为黑色 */\n            color: #fff; /* 设置文字颜色为白色 */\n            padding: 20px 0; /* 设置上下填充 */\n            width: 100%; /* 宽度设置为100% */\n            text-align: center; /* 文字居中显示 */\n        }\n\n        .custom2-size {\n            width: 65%; /* 宽度设置为100% */\n        }\n\n        .custom3-size {\n            width: 45%; /* 宽度设置为100% */\n        }\n\n        </style>\n\n        <main>\n            <article id=\"one\">\n                <p>關於防摔偵測的小夥伴</p>\n                <a href=\"http://127.0.0.1:1880/urgoodfriend\" target=\"_blank\">\n                    <img src=\"pic1\">\n                </a>\n                    \n            </article>\n            \n            <article id=\"two\">\n                <p>家中長輩安心追蹤</p>\n                <a href=\"http://127.0.0.1:1880/ui\" target=\"_blank\">\n                    <img src=\"pic2\" class=\"custom2-size\">\n                </a>\n            </article>\n\n            <article id=\"three\">\n                <p>LineBot機器人設置</p>\n                <a href=\"http://127.0.0.1:1880/linebot\" target=\"_blank\">\n                    <img src=\"pic3\" class=\"custom3-size\">\n                </a>\n            </article>\n\n            <footer>\n            <p>版權所有 &copy; 2024 Zhengqiying</p>\n            </footer>\n        </main>\n    </body>\n</html>",
+        "output": "str",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "3da4eca091c7e7d4"
+            ]
+        ]
+    },
+    {
+        "id": "3da4eca091c7e7d4",
+        "type": "http response",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c1c112d977580127",
+        "type": "http in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "url": "pic1",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "2f552b61fb158f9c"
+            ]
+        ]
+    },
+    {
+        "id": "2f552b61fb158f9c",
+        "type": "file in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "filename": "C:\\Users\\jimy8\\Downloads\\圖片1.png",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "b5b04176fe7af371"
+            ]
+        ]
+    },
+    {
+        "id": "b5b04176fe7af371",
+        "type": "http response",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "image/png"
+        },
+        "x": 770,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "056070bca68c4f7d",
+        "type": "http in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "url": "pic2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "d2bf2bffcfdc95ad"
+            ]
+        ]
+    },
+    {
+        "id": "d2bf2bffcfdc95ad",
+        "type": "file in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "filename": "C:\\Users\\jimy8\\Downloads\\圖片2.jpg",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "0e706cc5243afdad"
+            ]
+        ]
+    },
+    {
+        "id": "0e706cc5243afdad",
+        "type": "http response",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "image/jpg"
+        },
+        "x": 770,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a9559f3b2cea405f",
+        "type": "http in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "url": "pic3",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 420,
+        "wires": [
+            [
+                "9443d563044e96f9"
+            ]
+        ]
+    },
+    {
+        "id": "9443d563044e96f9",
+        "type": "file in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "filename": "C:\\Users\\jimy8\\Downloads\\圖片3.png",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "dce8eca006be2435"
+            ]
+        ]
+    },
+    {
+        "id": "dce8eca006be2435",
+        "type": "http response",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "image/png"
+        },
+        "x": 770,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8d696475abac4b02",
+        "type": "comment",
+        "z": "c92f87feda0c05d7",
+        "name": "基本網頁設置",
+        "info": "### ",
+        "x": 90,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "3e342b2138a3a490",
+        "type": "comment",
+        "z": "c92f87feda0c05d7",
+        "name": "防摔夥伴介紹",
+        "info": "",
+        "x": 90,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "bd5b0768d4d00e2c",
+        "type": "http in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "url": "urgoodfriend",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 580,
+        "wires": [
+            [
+                "a7a0f3d4702dc0b7"
+            ]
+        ]
+    },
+    {
+        "id": "a7a0f3d4702dc0b7",
+        "type": "template",
+        "z": "c92f87feda0c05d7",
+        "name": "webpage1",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<style>\n    body {\n        font-family: Arial, sans-serif;\n        background-color: #f0f0f0;\n        margin: 0;\n        padding: 0;\n    }\n    .container {\n        display: flex; /* 使用flex布局 */\n        align-items: center; /* 垂直居中 */\n        max-width: 1000px; /* 容器最大宽度调整为1000px */\n        margin: auto;\n        background-color: #ffffff;\n        padding: 20px;\n        border-radius: 8px;\n        box-shadow: 0 4px 8px rgba(0,0,0,0.1);\n        margin-top: 20px;\n    }\n    .container img {\n        margin-right: 20px; /* 图片和文本之间的间距 */\n        border-radius: 8px; /* 图片圆角 */\n        width: 600px; /* 图片宽度 */\n        height: 400px; /* 图片高度 */\n    }\n    .text-content {\n        flex: 1;\n    }\n    h1, p, .feature {\n        color: #333;\n    }\n    h1 {\n        color: #007bff;\n    }\n    .feature {\n        background-color: #007bff;\n        color: #ffffff;\n        padding: 10px;\n        border-radius: 4px;\n        margin-bottom: 10px;\n    }\n    .feature:nth-child(even) {\n        background-color: #343a40;\n    }\n</style>\n\n\n<body>\n    <div class=\"container\">\n        <img src=\"https://gcs.rimg.com.tw/g0/df5/a7f/mirotekco/0/3a/a5/21929092217509_607.png\" alt=\"ESP32\">\n        <div class=\"text-content\">\n            <h1>ESP32 簡介</h1>\n            <p>ESP32 是由 Espressif Systems 設計和製造的一款低成本、低功耗的單晶片系統（SoC），適用於各種物聯網（IoT）應用。</p>\n            <div class=\"feature\">WiFi頻段：2.4 GHz，支援協議：802.11 b/g/n</div>\n            <div class=\"feature\">藍牙:包含經典藍牙（legacy Bluetooth）與低功耗藍牙（Bluetooth Low Energy, BLE）</div>\n            <div class=\"feature\">腳位數:20 dbm（最高）</div>\n            <div class=\"feature\">價格實惠：與同樣規格的晶片或開發板相比，ESP32的價格相對較便宜</div>\n            <div class=\"feature\">與 Arduino 相容：ESP32 模組的開發方式可以完全相容於 Arduino</div>\n            <div class=\"feature\">應用廣泛：從智能居家應用到工業控制等等...</div>\n            <div style=\"text-align: center; margin-top: 20px;\">\n                <a href=\"https://wokwi.com/esp32\" target=\"_blank\">\n                    <button style=\"font-size: 20px; padding: 10px 20px; background-color: #DAA520; color: white; border: none; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\">\n                        一起線上學習ESP32!!\n                    </button>\n                </a>\n            </div>\n        </div>\n    </div>\n</body>\n</html>\n\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>ESP32 & MPU6050介绍</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            background-color: #f0f0f0;\n            margin: 0;\n            padding: 0;\n        }\n        .container {\n            display: flex; /* 使用flex布局 */\n            align-items: center; /* 垂直居中 */\n            max-width: 1000px; /* 容器最大宽度调整 */\n            margin: auto;\n            background-color: #ffffff;\n            padding: 20px;\n            border-radius: 8px;\n            box-shadow: 0 4px 8px rgba(0,0,0,0.1);\n            margin-top: 20px;\n        }\n        .container img {\n            margin-right: 20px; /* 图片和文本之间的间距 */\n            border-radius: 8px; /* 图片圆角 */\n            width: 600px; /* 图片宽度 */\n            height: 400px; /* 图片高度 */\n        }\n        .text-content {\n            flex: 1;\n        }\n        h1, p, .feature {\n            color: #333;\n        }\n        h1 {\n            color: #007bff;\n        }\n        .feature {\n            background-color: #007bff;\n            color: #ffffff;\n            padding: 10px;\n            border-radius: 4px;\n            margin-bottom: 10px;\n        }\n        .feature:nth-child(even) {\n            background-color: #343a40;\n        }\n    </style>\n</head>\n<body>\n\n<div class=\"container\" style=\"flex-direction: column; align-items: flex-start;\">\n    <h1>MPU6050 簡介</h1>\n    <p>MPU6050是款常見的6軸慣性感測元件，它包括了三軸加速度計及三軸陀螺儀。使用與讀取資料的介面為I2C，可以控制的細節相當多，網路上也有很多開源程式碼，我們的防摔小夥伴就是應用了ESP32加上MPU6050去做偵測。</p>\n    \n    <!-- 图片容器 -->\n    <div class=\"images-container\" style=\"display: flex; justify-content: center; gap: 20px;\">\n        <img src=\"https://miro.medium.com/v2/resize:fit:828/format:webp/0*DKiEPhWViieBdn9C.png\" style=\"width: 480px;\">\n        <img src=\"https://miro.medium.com/v2/resize:fit:828/format:webp/0*EHBwIzqGL1Nt1iIB.png\" style=\"width: 480px;\">\n    </div>\n    <div class=\"container\">\n        <img src=\"https://www.electronicwings.com/storage/PlatformSection/TopicContent/439/description/MPU6050%20Interfacing%20with%20ESP32.jpg\">\n    </div>\n\n    \n\n\n</div>\n\n</body>\n</html>\n",
+        "output": "str",
+        "x": 490,
+        "y": 580,
+        "wires": [
+            [
+                "b786c5b593012060"
+            ]
+        ]
+    },
+    {
+        "id": "f9aefe191abd03bd",
+        "type": "comment",
+        "z": "c92f87feda0c05d7",
+        "name": "摔倒偵測系統",
+        "info": "",
+        "x": 90,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "41ea0f4c62706924",
+        "type": "mqtt in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "topic": "sensor/mpu6050",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b9e05edf4e544cf5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 1220,
+        "wires": [
+            [
+                "aeea65962562fd6e",
+                "eb8d772461071b07",
+                "567ac7f885b8254a",
+                "f6d69cb2908e1f23",
+                "8115ee930e60cf6c",
+                "c333d9403ad851a7",
+                "756233cec9df035e",
+                "82647b073b37dfd0"
+            ]
+        ]
+    },
+    {
+        "id": "2b24b4b24ea68fc7",
+        "type": "aedes broker",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "persistence_bind": "memory",
+        "dburl": "",
+        "usetls": false,
+        "x": 170,
+        "y": 1020,
+        "wires": [
+            [
+                "bbc761b5f19e23c8"
+            ],
+            [
+                "5ccc0da09a3fa50a"
+            ]
+        ]
+    },
+    {
+        "id": "bbc761b5f19e23c8",
+        "type": "debug",
+        "z": "c92f87feda0c05d7",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "5ccc0da09a3fa50a",
+        "type": "debug",
+        "z": "c92f87feda0c05d7",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "8c435baa8ba10376",
+        "type": "ui_text",
+        "z": "c92f87feda0c05d7",
+        "group": "7b4589c8e9a4767b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ACC_X水平左右加速度",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "18",
+        "color": "#000000",
+        "x": 930,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "b07a738e0abc8282",
+        "type": "ui_text",
+        "z": "c92f87feda0c05d7",
+        "group": "7b4589c8e9a4767b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ACC_Y水平前進加速度",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "18",
+        "color": "#000000",
+        "x": 930,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "36c7302d110aef10",
+        "type": "ui_text",
+        "z": "c92f87feda0c05d7",
+        "group": "7b4589c8e9a4767b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ACC_Z蹲下跳躍加速度",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "18",
+        "color": "#000000",
+        "x": 930,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "92bcb9630c26365e",
+        "type": "ui_text",
+        "z": "c92f87feda0c05d7",
+        "group": "7b4589c8e9a4767b",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "GYR_X正面旋轉速率",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "18",
+        "color": "#000000",
+        "x": 920,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "066fa35c50325fea",
+        "type": "ui_text",
+        "z": "c92f87feda0c05d7",
+        "group": "7b4589c8e9a4767b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "GYR_Y側面旋轉速率",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "18",
+        "color": "#000000",
+        "x": 920,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "23345a3d39db0a3c",
+        "type": "ui_text",
+        "z": "c92f87feda0c05d7",
+        "group": "7b4589c8e9a4767b",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "GYR_Z原地旋轉速率",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "18",
+        "color": "#000000",
+        "x": 920,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "5188de3bae252d5e",
+        "type": "ui_text",
+        "z": "c92f87feda0c05d7",
+        "group": "7b4589c8e9a4767b",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "18",
+        "color": "#000000",
+        "x": 890,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "aeea65962562fd6e",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "function 1",
+        "func": "// 假设msg.payload已经是一个解析后的JSON对象\n// 例如: {\"ACC_X\":-0.043457031, \"ACC_Y\":0.027099609, ... }\n\n// 获取所有的键\nvar keys = Object.keys(msg.payload);\n\n// 检查是否有键\nif (keys.length > 0) {\n    var firstKey = keys[0]; // 获取第一个键的名称\n    var firstValue = msg.payload[firstKey]; // 获取第一个键对应的值\n\n    // 创建一个新消息对象，只包含第一个键值对\n    var newMsg1 = { payload: firstValue };\n\n    // 发送这个新消息对象到第一个输出\n    return newMsg1;\n} else {\n    // 如果输入消息没有任何键，发送null\n    return [null];\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1140,
+        "wires": [
+            [
+                "8c435baa8ba10376"
+            ]
+        ]
+    },
+    {
+        "id": "eb8d772461071b07",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "function 2",
+        "func": "// 假设msg.payload已经是一个解析后的JSON对象\n// 例如: {\"ACC_X\":-0.043457031, \"ACC_Y\":0.027099609, ... }\n\n// 获取所有的键\nvar keys = Object.keys(msg.payload);\n\n// 检查是否有键\nif (keys.length > 0) {\n    var secKey = keys[1]; // 获取第一个键的名称\n    var secValue = msg.payload[secKey]; // 获取第一个键对应的值\n\n    // 创建一个新消息对象，只包含第一个键值对\n    var newMsg2 = { payload: secValue };\n\n    // 发送这个新消息对象到第一个输出\n    return newMsg2;\n} else {\n    // 如果输入消息没有任何键，发送null\n    return [null];\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1200,
+        "wires": [
+            [
+                "b07a738e0abc8282"
+            ]
+        ]
+    },
+    {
+        "id": "567ac7f885b8254a",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "function 3",
+        "func": "// 假设msg.payload已经是一个解析后的JSON对象\n// 例如: {\"ACC_X\":-0.043457031, \"ACC_Y\":0.027099609, ... }\n\n// 获取所有的键\nvar keys = Object.keys(msg.payload);\n\n// 检查是否有键\nif (keys.length > 0) {\n    var thirdKey = keys[2]; // 获取第一个键的名称\n    var thirdValue = msg.payload[thirdKey]; // 获取第一个键对应的值\n\n    // 创建一个新消息对象，只包含第一个键值对\n    var newMsg3 = { payload: thirdValue };\n\n    // 发送这个新消息对象到第一个输出\n    return newMsg3;\n} else {\n    // 如果输入消息没有任何键，发送null\n    return [null];\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1260,
+        "wires": [
+            [
+                "36c7302d110aef10"
+            ]
+        ]
+    },
+    {
+        "id": "f6d69cb2908e1f23",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "function 4",
+        "func": "// 假设msg.payload已经是一个解析后的JSON对象\n// 例如: {\"ACC_X\":-0.043457031, \"ACC_Y\":0.027099609, ... }\n\n// 获取所有的键\nvar keys = Object.keys(msg.payload);\n\n// 检查是否有键\nif (keys.length > 0) {\n    var fourKey = keys[3]; // 获取第一个键的名称\n    var fourValue = msg.payload[fourKey]; // 获取第一个键对应的值\n\n    // 创建一个新消息对象，只包含第一个键值对\n    var newMsg4 = { payload: fourValue };\n\n    // 发送这个新消息对象到第一个输出\n    return newMsg4;\n} else {\n    // 如果输入消息没有任何键，发送null\n    return [null];\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1320,
+        "wires": [
+            [
+                "92bcb9630c26365e"
+            ]
+        ]
+    },
+    {
+        "id": "8115ee930e60cf6c",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "function 5",
+        "func": "// 假设msg.payload已经是一个解析后的JSON对象\n// 例如: {\"ACC_X\":-0.043457031, \"ACC_Y\":0.027099609, ... }\n\n// 获取所有的键\nvar keys = Object.keys(msg.payload);\n\n// 检查是否有键\nif (keys.length > 0) {\n    var fiveKey = keys[4]; // 获取第一个键的名称\n    var fiveValue = msg.payload[fiveKey]; // 获取第一个键对应的值\n\n    // 创建一个新消息对象，只包含第一个键值对\n    var newMsg5 = { payload: fiveValue };\n\n    // 发送这个新消息对象到第一个输出\n    return newMsg5;\n} else {\n    // 如果输入消息没有任何键，发送null\n    return [null];\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1380,
+        "wires": [
+            [
+                "066fa35c50325fea"
+            ]
+        ]
+    },
+    {
+        "id": "c333d9403ad851a7",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "function 6",
+        "func": "// 假设msg.payload已经是一个解析后的JSON对象\n// 例如: {\"ACC_X\":-0.043457031, \"ACC_Y\":0.027099609, ... }\n\n// 获取所有的键\nvar keys = Object.keys(msg.payload);\n\n// 检查是否有键\nif (keys.length > 0) {\n    var sixKey = keys[5]; // 获取第一个键的名称\n    var sixValue = msg.payload[sixKey]; // 获取第一个键对应的值\n\n    // 创建一个新消息对象，只包含第一个键值对\n    var newMsg6 = { payload: sixValue };\n\n    // 发送这个新消息对象到第一个输出\n    return newMsg6;\n} else {\n    // 如果输入消息没有任何键，发送null\n    return [null];\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1440,
+        "wires": [
+            [
+                "23345a3d39db0a3c"
+            ]
+        ]
+    },
+    {
+        "id": "756233cec9df035e",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "function 7",
+        "func": "// 假设msg.payload已经是一个解析后的JSON对象\n// 例如: {\"ACC_X\":-0.043457031, \"ACC_Y\":0.027099609, ... }\n\n// 获取所有的键\nvar keys = Object.keys(msg.payload);\n\n// 检查是否有键\nif (keys.length > 0) {\n    var sixKey = keys[6]; // 获取第一个键的名称\n    var sixValue = msg.payload[sixKey]; // 获取第一个键对应的值\n\n    // 创建一个新消息对象，只包含第一个键值对\n    var newMsg6 = { payload: sixValue };\n\n    // 发送这个新消息对象到第一个输出\n    return newMsg6;\n} else {\n    // 如果输入消息没有任何键，发送null\n    return [null];\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1500,
+        "wires": [
+            [
+                "5188de3bae252d5e"
+            ]
+        ]
+    },
+    {
+        "id": "e8e826ee436d428f",
+        "type": "ui_text",
+        "z": "c92f87feda0c05d7",
+        "group": "7b4589c8e9a4767b",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "檢查器",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "18",
+        "color": "#000000",
+        "x": 890,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "82647b073b37dfd0",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "function 8",
+        "func": "// 获取所有的键\nvar keys = Object.keys(msg.payload);\nvar extremeValues = []; // 用于存储大于80或小于-80的值\n\n// 检查是否有键\nif (keys.length > 0) {\n    // 获取每个键对应的值\n    keys.forEach(function(key) {\n        var value = msg.payload[key];\n        // 检查值是否大于80或小于-80\n        if (value > 100 || value < -100) {\n            // 如果符合条件，则将该值添加到数组中\n            extremeValues.push(value);\n        }\n    });\n\n    // 如果没有任何值大于80或小于-80，添加一个0到数组中\n    if (extremeValues.length === 0) {\n        extremeValues.push(0);\n    }\n\n    // 创建一个新消息对象，包含所有极值的数组\n    var newMsg = { payload: extremeValues };\n\n    // 发送这个新消息对象\n    return [newMsg];\n} else {\n    // 如果输入消息没有任何键，发送一个包含0的消息\n    return [{ payload: [0] }];\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1600,
+        "wires": [
+            [
+                "e8e826ee436d428f",
+                "77aad6b3eb30d6b7"
+            ]
+        ]
+    },
+    {
+        "id": "db85073f091ee136",
+        "type": "ui_audio",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "group": "7b4589c8e9a4767b",
+        "voice": "Google 國語（臺灣）",
+        "always": true,
+        "x": 920,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "77aad6b3eb30d6b7",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "警告",
+        "func": "// 检查payload是否大于80或小于-80\nif (msg.payload > 100 || msg.payload < -100) {\n    // 如果是，创建一个包含重复消息的数组\n    var messages = [];\n    for (var i = 0; i < 2; i++) {\n        // 将重复的消息加入到数组中\n        messages.push({ payload: \"警告 警告\" });\n    }\n    // 使用Node-RED的返回数组语法来返回所有息\n    return [messages];\n} else {\n    // 如果不是，不返回任何东西\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1700,
+        "wires": [
+            [
+                "db85073f091ee136",
+                "checkValueFunction"
+            ]
+        ]
+    },
+    {
+        "id": "ec59b076.d8389",
+        "type": "ui_template",
+        "z": "c92f87feda0c05d7",
+        "group": "ca82fb74c673b6b3",
+        "name": "使用者資訊基本設置",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n:root {\n  --color-green-primary: rgb(51, 204, 51);\n  --color-green-secondary: rgb(26, 101, 26);\n  --color-red-primary: rgb(255, 0, 0);\n  --color-red-secondary: rgba(153,0,0,1);\n  --color-gray-primary:rgba(40,40,40,1);\n  --color-gray-secondary:rgba(65,65,65,1);\n  --color-text-primary: rgb(230, 226, 209);\n  --color-widget-border: rgb(84, 78, 78);\n}\n\nbody {\n  background-image: url(https://thumb.photo-ac.com/17/17bf8ec9f30d636a593aac3fcf90ff3f_t.jpeg);\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n  background-position: center center;\n}\n\n#Control_Panel_使用者資訊 {\n  background: transparent;\n  border: transparent; \n  \n}\n\nbody.nr-dashboard-theme md-content md-card {\n    background-color: #33333300;\n    color: #ffffff;\n    text-shadow: 4px 2px 4px #00000045;\n    box-shadow: 0 -1px 5px 1px #00000045;\n    border-radius: 12px;\n    border: 1px solid var(--color-widget-border);\n}\n</style>\n\n\n<h3 style=\"color: black; margin: 20px 0;text-align: center;\">User Profile</h3>\n\n<!-- 隐藏的文件输入 -->\n<input type=\"file\" id=\"file-upload\" name=\"file-upload\" style=\"display: none;\" onchange=\"handleFileUpload(event)\">\n<!-- 可视化的上传区域 -->\n<label for=\"file-upload\" style=\"cursor: pointer; border: 2px dashed #808080; display: inline-block; width: 300px; height: 300px; border-radius: 50%; margin: 20px auto; line-height: 300px;\">\n    <img src=\"https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/306909225_464467769054325_7744931853057398686_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=vGc9A3fWxIAAb4PWgZ-&_nc_ht=scontent-tpe1-1.xx&oh=00_AfCYVESXPliE9s1Z3LdBau0HGhz5JCpMoItcHeMh-M6hoA&oe=661601CE\" alt=\"User Image\" style=\"display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover;\">\n</label>\n\n<div style=\"color: black;margin: 10px 0;text-align: center;\">\n    <strong>Name:</strong> <input type=\"text\" id=\"user-name\" name=\"user-name\" >\n</div>\n<div style=\"color: black;margin: 10px 0;text-align: center;\">\n    <strong>Age:</strong> <input type=\"number\" id=\"user-age\" name=\"user-age\" min=\"0\">\n</div>\n<div style=\"color: black;margin: 10px 0;text-align: center;\">\n    <strong>Phone Number:</strong> <input type=\"tel\" id=\"user-phone\" name=\"user-phone\">\n</div>\n<button style=\"margin: 5px auto; display: block;\">Update</button>\n<script>\n  function handleFileUpload(event) {\n    var image = document.querySelector('label[for=\"file-upload\"] img');\n    var file = event.target.files[0];\n    var reader = new FileReader();\n    \n    reader.onloadend = function() {\n      image.src = reader.result;\n    }\n    \n    if (file) {\n      reader.readAsDataURL(file);\n    } else {\n      image.src = \"\"; // 或者设置为默认图片\n    }\n  }\n</script>\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 160,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1c4948c1e37d006",
+        "type": "ui_template",
+        "z": "c92f87feda0c05d7",
+        "group": "b2f9ea53885e0554",
+        "name": "如何避免骨質酥鬆基本設置",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n:root {\n  --color-green-primary: rgb(51, 204, 51);\n  --color-green-secondary: rgb(26, 101, 26);\n  --color-red-primary: rgb(255, 0, 0);\n  --color-red-secondary: rgba(153,0,0,1);\n  --color-gray-primary:rgba(40,40,40,1);\n  --color-gray-secondary:rgba(65,65,65,1);\n  --color-text-primary: rgb(230, 226, 209);\n  --color-widget-border: rgb(84, 78, 78);\n}\n\n\n\n#Control_Panel_如何避免骨質酥鬆 {\n  background: transparent;\n  border: transparent; \n  \n}\n\n\n\nbody.nr-dashboard-theme md-content md-card {\n    background-color: #33333300;\n    color: #ffffff;\n    text-shadow: 4px 2px 4px #00000045;\n    box-shadow: 0 -1px 5px 1px #00000045;\n    border-radius: 12px;\n    border: 1px solid var(--color-widget-border);\n}\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 180,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bef00a05b2f7dfd",
+        "type": "ui_template",
+        "z": "c92f87feda0c05d7",
+        "group": "7b4589c8e9a4767b",
+        "name": "MPU6050基本設置",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n:root {\n  --color-green-primary: rgb(51, 204, 51);\n  --color-green-secondary: rgb(26, 101, 26);\n  --color-red-primary: rgb(255, 0, 0);\n  --color-red-secondary: rgba(153,0,0,1);\n  --color-gray-primary:rgba(40,40,40,1);\n  --color-gray-secondary:rgba(65,65,65,1);\n  --color-text-primary: rgb(230, 226, 209);\n  --color-widget-border: rgb(84, 78, 78);\n}\n\n\n\n\n#Control_Panel_MPU6050 {\n  background: transparent;\n  border: transparent; \n  \n}\n\nbody.nr-dashboard-theme md-content md-card {\n    background-color: #33333300;\n    color: #ffffff;\n    text-shadow: 4px 2px 4px #00000045;\n    box-shadow: 0 -1px 5px 1px #00000045;\n    border-radius: 12px;\n    border: 1px solid var(--color-widget-border);\n}\n\n</style>\n\n<style>\n  #Control_Panel_MPU6050 .nr-dashboard-text {\n    color: var(--color-text-primary); /* 使用预定义的文字颜色 */\n    background-color: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */\n    font-size: 20px; /* 字体大小 */\n    padding: 10px; /* 内边距 */\n    border-radius: 5px; /* 圆角边框 */\n    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 文字阴影 */\n  }\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 150,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8957680537246c0",
+        "type": "ui_template",
+        "z": "c92f87feda0c05d7",
+        "group": "b2f9ea53885e0554",
+        "name": "內文",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "\n\n  <style>\n    /* 为文本内容添加样式 */\n    .custom-text-content {\n      color: #000000; /* 文字颜色为黑色 */\n      background-color: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */\n      padding: 15px; /* 内边距 */\n      border-radius: 8px; /* 圆角 */\n    }\n    \n    /* 调整列表样式 */\n    .custom-text-content ul {\n      padding-left: 20px; /* 列表缩进 */\n    }\n    \n    .custom-text-content li {\n      margin-bottom: 10px; /* 列表项之间的间距 */\n    }\n  </style>\n\n  <md-card-content class=\"custom-text-content\">\n    <p>為了維持健康的骨骼並預防骨質疏鬆症，請遵循以下步驟：</p>\n    <ul>\n      <li><b>均衡飲食：</b>攝取足夠的鈣質來源，如牛奶、豆製品、綠葉蔬菜等。</li>\n      <li><b>曝曬日光：</b>每天至少曝曬15分鐘，幫助身體製造維生素D。</li>\n      <li><b>規律運動：</b>進行重量訓練和走路等活動可以強化骨骼。</li>\n      <li><b>戒菸與限酒：</b>避免煙草和限制酒精攝入量。</li>\n      <li><b>限制咖啡因：</b>過量的咖啡因可能會加速骨質流失。</li>\n      <li><b>骨密度檢查：</b>定期進行骨密度檢查，特別是更年期後的婦女。</li>\n    </ul>\n  </md-card-content>\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 390,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7fb9f29ef5158db3",
+        "type": "comment",
+        "z": "c92f87feda0c05d7",
+        "name": "Linebot機器人",
+        "info": "",
+        "x": 110,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "b786c5b593012060",
+        "type": "http response",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "356c6c998fe81952",
+        "type": "http in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "url": "/linebot",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 2140,
+        "wires": [
+            [
+                "2899b2f45e03bee3"
+            ]
+        ]
+    },
+    {
+        "id": "83f696230f96721e",
+        "type": "http response",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "2899b2f45e03bee3",
+        "type": "template",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Linebot Application</title>\n    <style>\n        body {\n            font-family: 'Arial', sans-serif;\n            background-color: #f4f4f4;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            height: 100vh;\n            margin: 0;\n        }\n\n        form {\n            background-color: #fff;\n            border-radius: 8px;\n            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n            padding: 20px;\n            max-width: 400px;\n            width: 100%;\n        }\n\n        h1 {\n            color: #333;\n            font-size: 24px;\n            text-align: center;\n        }\n\n        label {\n            color: #333;\n            display: block;\n            margin-top: 20px;\n        }\n\n        textarea {\n            width: 95%;\n            padding: 10px;\n            margin-top: 5px;\n            border-radius: 4px;\n            border: 1px solid #ddd;\n            resize: vertical;\n        }\n\n        input[type=\"submit\"] {\n            background-color: #5cb85c;\n            color: white;\n            padding: 10px 20px;\n            border: none;\n            border-radius: 4px;\n            cursor: pointer;\n            margin-top: 20px;\n            width: 100%;\n        }\n\n        input[type=\"submit\"]:hover {\n            background-color: #4cae4c;\n        }\n    </style>\n</head>\n<body>\n    <form action=\"http://127.0.0.1:1880/submit-content\" method=\"post\">\n        <h1>設定您的機器人要傳送的訊息😆</h1>\n        <div>\n            <label for=\"content\">内容:</label><br>\n            <textarea id=\"content\" name=\"content\" rows=\"4\" cols=\"50\"></textarea>\n        </div>\n        <div>\n            <input type=\"submit\" value=\"測試並保存\">\n        </div>\n    </form>\n</body>\n</html>\n",
+        "output": "str",
+        "x": 390,
+        "y": 2140,
+        "wires": [
+            [
+                "83f696230f96721e"
+            ]
+        ]
+    },
+    {
+        "id": "httpin",
+        "type": "http in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "url": "/submit-content",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 2260,
+        "wires": [
+            [
+                "79e9eb92724496c7",
+                "functionnode"
+            ]
+        ]
+    },
+    {
+        "id": "functionnode",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "Prepare LINE Notify",
+        "func": "msg.headers = {\n    \"Content-Type\": \"application/x-www-form-urlencoded\",\n    \"Authorization\": \"urkey\"\n// 在原有内容的基础上加上 \"測試用\" 文字\nmsg.payload = \"message=\" + encodeURIComponent(\"*此為測試用訊息：\" + msg.payload.content);\nmsg.method = \"POST\";\nmsg.url = \"https://notify-api.line.me/api/notify\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 10,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 2380,
+        "wires": [
+            [
+                "httprequest"
+            ]
+        ]
+    },
+    {
+        "id": "httprequest",
+        "type": "http request",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 800,
+        "y": 2380,
+        "wires": [
+            [
+                "httpresponse"
+            ]
+        ]
+    },
+    {
+        "id": "httpresponse",
+        "type": "http response",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "fafc53afc4aa63f5",
+        "type": "inject",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "110",
+        "payloadType": "num",
+        "x": 450,
+        "y": 1700,
+        "wires": [
+            [
+                "77aad6b3eb30d6b7"
+            ]
+        ]
+    },
+    {
+        "id": "79e9eb92724496c7",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "save content",
+        "func": "// Function节点代码\nlet content = msg.payload.content;\nflow.set(\"submitContent\", content); // 将内容保存在流程上下文中\n// 或者使用global.set(\"submitContent\", content); 保存在全局上下文中\n\nmsg.payload = \"内容已保存\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 2260,
+        "wires": [
+            [
+                "a874dc60287e0204"
+            ]
+        ]
+    },
+    {
+        "id": "a874dc60287e0204",
+        "type": "http response",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "checkValueFunction",
+        "type": "function",
+        "z": "c92f87feda0c05d7",
+        "name": "send line",
+        "func": "\nlet savedContent = flow.get(\"submitContent\") || \"没有保存的内容\";\nmsg.payload = \"message=\" + encodeURIComponent(savedContent);\nmsg.headers = {\n    \"Content-Type\": \"application/x-www-form-urlencoded\",\n    \"Authorization\": \"Bearer AxkH1YmnF5UulOIye9b3p68KypgWW06l6xmhz9J2Jr3\"\n};\nmsg.url = \"https://notify-api.line.me/api/notify\";\nmsg.method = \"POST\";\nreturn [null, msg];\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1880,
+        "wires": [
+            [],
+            [
+                "sendLineNotifyHttpRequest"
+            ]
+        ]
+    },
+    {
+        "id": "debug",
+        "type": "debug",
+        "z": "c92f87feda0c05d7",
+        "name": "0",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "sendLineNotifyHttpRequest",
+        "type": "http request",
+        "z": "c92f87feda0c05d7",
+        "name": "0",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 890,
+        "y": 1880,
+        "wires": [
+            [
+                "debug"
+            ]
+        ]
+    },
+    {
+        "id": "5714f7c2710325bd",
+        "type": "http in",
+        "z": "c92f87feda0c05d7",
+        "name": "",
+        "url": "",
+        "method": "get",
+        "upload": false,
+        "x": 270,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    }
+]
